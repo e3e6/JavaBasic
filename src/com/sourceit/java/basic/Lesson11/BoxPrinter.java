@@ -1,24 +1,35 @@
 package com.sourceit.java.basic.Lesson11;
 
-public class BoxPrinter { 
-    private Object val; 
+public class BoxPrinter<T, Q> { 
+    private T val; 
+    private Q var2;
  
-    public BoxPrinter(Object arg) { 
+    public BoxPrinter(T arg, Q secondArg) { 
         val = arg; 
     } 
  
-    public Object getValue() { 
+    public T getValue() { 
         return val; 
     } 
+    
+    public Q getValue2() { 
+        return var2; 
+    } 
+    
+    public void print(){
+    	System.out.println("Class = " + val.getClass());
+    }
 
     
     public static void main(String[] args) { 
-        BoxPrinter value1 = new BoxPrinter(10); 
-        Integer intValue1 = (Integer) value1.getValue();
+        BoxPrinter<Integer, String> value1 = new BoxPrinter<Integer, String>(10, "10"); 
+        value1.print();
+        Integer intValue1 = value1.getValue();
         System.out.println(intValue1); 
  
-        BoxPrinter value2 = new BoxPrinter("12"); 
-        Integer intValue2 = (Integer) value2.getValue();
+        BoxPrinter<String, Integer> value2 = new BoxPrinter<>("12", 10); 
+        String intValue2 = value2.getValue();
+        value2.print();
         System.out.println(intValue2); 
     } 
 } 
