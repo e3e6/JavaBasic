@@ -46,8 +46,12 @@ public abstract class TextStatistics {
 	 */
 	public abstract List<String> words();
 	
-	public abstract int getMaximumCount();
-	public abstract int getMinimumCount();
+	/**
+	 * Get count of a char which occurs most frequently
+	 * @return
+	 */
+	public abstract int getMostPopularCharCount();
+	public abstract int getLeastPopularCharCount();
 	
 	public abstract char getCharByCount(int count);
 }
