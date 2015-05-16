@@ -14,4 +14,8 @@ public class Utils {
 
 		return Arrays.asList(arr);
 	}
+	
+	public static void debug(Object str){
+		System.out.println(str);
+	}
 }
