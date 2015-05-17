@@ -52,6 +52,10 @@ class User implements Comparable<User> {
 		this.lastName = lastName;
 	}
 
+@Override
+public boolean equals(Object obj) {
+	return super.equals(obj);
+}
 
 	public int compareTo(User n) {
 		 int lastCmp = lastName.compareTo(n.lastName);
