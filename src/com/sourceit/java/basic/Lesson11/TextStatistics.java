@@ -53,5 +53,5 @@ public abstract class TextStatistics {
 	public abstract int getMostPopularCharCount();
 	public abstract int getLeastPopularCharCount();
 	
-	public abstract char getCharByCount(int count);
+	public abstract char[] getCharByCount(int count);
 }
