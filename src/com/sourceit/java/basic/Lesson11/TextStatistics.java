@@ -8,7 +8,7 @@ import java.util.Map;
  *
  */
 public abstract class TextStatistics {
-	private String text;
+	protected String text;
 	
 	public TextStatistics(String text){
 		this.text = text;
