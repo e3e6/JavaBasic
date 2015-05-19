@@ -38,7 +38,7 @@ public abstract class TextStatistics {
 	 * 
 	 * @return collection of unique characters and it's counts
 	 */
-	public abstract Map<String, Integer> getChars();
+	public abstract Map<Character, Integer> getChars();
 	
 	/**
 	 * 
