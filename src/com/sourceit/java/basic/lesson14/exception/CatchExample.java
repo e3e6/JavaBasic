@@ -9,10 +9,14 @@ import java.util.List;
 public class CatchExample {
 
     private List<Integer> list = new ArrayList<Integer>(SIZE);
-    private static final int SIZE = 10;
+    private static final int SIZE = 2;
 
 	
     public void writeList() {
+    	
+    	list.add(10);
+    	list.add(20);
+    	
         PrintWriter out = null;
 
         try {
@@ -23,11 +27,11 @@ public class CatchExample {
                 out.println("Value at: " + i + " = " + list.get(i));
             }
         } catch (IndexOutOfBoundsException e) {
-            System.err.println("Caught IndexOutOfBoundsException: "
+            System.out.println("Caught IndexOutOfBoundsException: "
                                +  e.getMessage());
                                      
         } catch (IOException e) {
-            System.err.println("Caught IOException: " +  e.getMessage());
+            System.out.println("Caught IOException: " +  e.getMessage());
                                      
         } finally {
             if (out != null) {
@@ -39,6 +43,12 @@ public class CatchExample {
             }
         }
     }
+    
+    public void simple(){
+    	int i =  1;
+    }
+    
+
 
 	/**
 	 * @param args
