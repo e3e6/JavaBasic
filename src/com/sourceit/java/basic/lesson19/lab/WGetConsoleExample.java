@@ -5,7 +5,7 @@ public class WGetConsoleExample {
 	public static final String[] COMMANDS = {"Save page", "Display title", "Find a word", "List all URL's on the page"};
 	
 	public static void main(String[] args) {
-
+		//Always let the user know how to use your app
 		if(args.length == 0){
 			System.out.println(getInstructions());
 			return;
@@ -13,7 +13,7 @@ public class WGetConsoleExample {
 		
 		String command = args[0];
 		String url;
-		if("-i".equals(command)){
+		if("-u".equals(command)){
 			//TODO ask for URL
 			System.out.println("Enter an URL:");
 		} else if(!command.startsWith("http")){

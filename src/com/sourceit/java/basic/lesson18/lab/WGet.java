@@ -13,23 +13,34 @@ public class WGet {
 		    InputStream is = null;
 		    BufferedReader br;
 		    String line;
-
+		    StringBuilder sb = new StringBuilder();
 		    try {
-		        url = new URL("https://dl.dropboxusercontent.com/u/56274892/Java-Basic/index.html");
+		        url = new URL("http://www.example.com/");
 		        is = url.openStream();
 		        br = new BufferedReader(new InputStreamReader(is, "UTF-8"));
 		        
+		       
 		        while ((line = br.readLine()) != null) {
-		            System.out.println(line);
+		        	sb.append(line);
 		        }
 		    }catch(Exception ex){
-		    	System.out.println("Smth. wrong" + ex);
+		    	System.out.println("Smth. wrong: " + ex);
+		    	return;
 		    } finally {
 		    	if (is != null){
 		    		try {
 						is.close();
 					} catch (IOException e) {}
 		    	}
+		    }
+		    
+		    //Find all the links
+		    String htmlPage = sb.toString();
+		    
+		    String[] links = htmlPage.split("http://");
+		    
+		    for(String str: links){
+		    	System.out.println(str);
 		    }
 	}
 
