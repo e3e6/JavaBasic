@@ -1,0 +1,50 @@
+.column1 {
+  left: 0px;
+}
+
+.row2{
+  top: 500px;
+}
+
+.column2 {
+left: 40%;
+}
+
+p {
+  position: absolute;
+  border: 1px solid green;
+  margin: 10px;
+  padding: 15px;
+}
+
+
+div {
+  width: 38%;
+  border: 1px solid red;
+  position: absolute;
+}
+
+H1 {
+  color: blue;
+  font-size: 14px;
+}
+
+span {
+  background-color: yellow;
+}
+
+.commercial {
+  background-color: yellow;
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+}
+
+.emailus{
+  position: fixed;
+  right: 0px;
+  top: 10%;
+    background-color: green;
+    width: 40px;
+    height: 40px;
+}

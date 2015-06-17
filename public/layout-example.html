@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#main {
+  width: 600px;
+  margin: 0 auto; 
+}
+
+.label, .endlabel{
+    background-color: #6AC5AC;
+    color: #414142;
+  line-height: 1em;
+  position: absolute;
+}
+
+.endlabel {
+  right: 0;
+  bottom: 0;
+  padding: 3px 0 0 3px;
+}
+
+.elem {
+  border: solid #6AC5AC 3px;
+  position: relative;
+}
+</style>
+</head>
+<body>
+<div id="main" class="elem">
+  <span class="label">&lt;div id="main"&gt;</span>
+  <p>
+    Setting the <code>width</code> of a block-level element will prevent it from stretching out to the edges of its container to the left and right. Then, you can set the left and right margins to <code>auto</code> to horizontally center that element within its container. The element will take up the width you specify, then the remaining space will be split evenly between the two margins.
+  </p>
+  <p>
+    The only problem occurs when the browser window is narrower than the width of your element. The browser resolves this by creating a horizontal scrollbar on the page. Let's improve the situation...
+  </p>
+  <span class="endlabel">&lt;/div&gt;</span>
+</div>
+</body>
+</html>
